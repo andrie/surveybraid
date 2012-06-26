@@ -1,0 +1,22 @@
+Package: surveybraid
+Maintainer: Andrie de Vries <apdevries@gmail.com>
+License: GPL (>=2)
+Title: A survey report writing system, building on surveyor and braid
+LazyData: true
+LazyLoad: true
+Author: Andrie de Vries <apdevries@gmail.com>
+Description: A survey report writing system, building on surveyor and braid
+Author@R: person("Andrie", "de Vries",
+    email="apdevries@gmail.com")
+Version: 0.0-01
+URL: www.pentalibra.com
+Date: 2012-06-25
+Imports:
+    surveydata,
+    surveyor (>= 0.2-01),
+    braid (>= 0.1-06)
+Suggests:
+    braidppt
+Collate:
+    'surveybraid-package.R'
+    'surveybraid.R'
