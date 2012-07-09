@@ -37,10 +37,14 @@ is.surveybraid <- function(x){
 #' 
 #' @param x surveybraid object
 #' @param qid Question id
+#' @param statsFunction  A surveyor stats function
+#' @param plotFunction A surveyor plot function
+#' @param codeFunction A surveyor stats function
 #' @param outputType "latex", "ppt" or "device": Specifies destination of ouput
 #' @param plotSize Size in inches of plot output, e.g. c(4,3)
 #' @param onlyBreaks Numeric vector that limits crossbreak processing
 #' @param plotMultiplierLimits Numeric vector of length two, indicating lower and upper limit of vertical plot resizing
+#' @param addPlotTitle If TRUE, adds question text to plot title
 #' @param ... Other parameters passed to \code{\link[surveyor]{surveyPlot}}
 #' @method surveyPlot surveybraid
 #' @export

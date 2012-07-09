@@ -21,7 +21,8 @@ q_data <- data.frame(
     crossbreak2=c("D", "E", "D", "E"),
     weight=c(0.9, 1.1, 0.8, 1.2)
 )
-varlabels(q_data) <- c("Question 1", 
+varlabels(q_data) <- c(
+    "Question 1", 
     "Question 4: red", "Question 4: blue", "Question 4: green", 
     "crossbreak",
     "crossbreak2",
@@ -49,12 +50,12 @@ test_that("working folders are empty", {
 
 test_that("surveyPlot works in Latex", {
       tbraid <- as.braid(path = latexPath, fileInner=sinkfile, outputType = "latex")
-      s <- as.surveyor(q_data, q_data$crossbreak, q_data$weight)
+      s <- as.surveyor(q_data, q_data$crossbreak, q_data$weight, defaults=surveyorDefaults(printTable=FALSE))
       t <- as.surveybraid(s, tbraid)
       
       braidHeading(tbraid, "Test")
-      surveyPlot(t, "Q1", codeSingle, statsBin, plotBar)
-      surveyPlot(t, "Q4", codeArray, statsBin, plotBar)
+      surveyPlot(t, "Q1", statsBin, plotBar)
+      surveyPlot(t, "Q4", statsBin, plotBar)
       braidSave(tbraid)
       
       expect_true(file.exists(file.path(latexPath, sinkfile)))

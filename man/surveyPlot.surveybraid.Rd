@@ -17,6 +17,12 @@
 
   \item{qid}{Question id}
 
+  \item{statsFunction}{A surveyor stats function}
+
+  \item{plotFunction}{A surveyor plot function}
+
+  \item{codeFunction}{A surveyor stats function}
+
   \item{outputType}{"latex", "ppt" or "device": Specifies
   destination of ouput}
 
@@ -29,6 +35,9 @@
   \item{plotMultiplierLimits}{Numeric vector of length two,
   indicating lower and upper limit of vertical plot
   resizing}
+
+  \item{addPlotTitle}{If TRUE, adds question text to plot
+  title}
 
   \item{...}{Other parameters passed to
   \code{\link[surveyor]{surveyPlot}}}
