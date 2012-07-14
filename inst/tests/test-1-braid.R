@@ -5,9 +5,9 @@
 
 path <- tempdir()
 latexPath <- file.path(path, "latex")
-dir.create(latexPath, recursive=TRUE)
+dir.create(latexPath, recursive=TRUE, showWarnings=FALSE)
 graphPath <- file.path(latexPath, "graphics")
-dir.create(graphPath, recursive=TRUE)
+dir.create(graphPath, recursive=TRUE, showWarnings=FALSE)
 
 sinkfile   <- "surveyor_test.tex"
 
@@ -28,7 +28,7 @@ varlabels(q_data) <- c(
     "crossbreak2",
     "weight")
 
-q_data <- as.surveydata(q_data)
+q_data <- as.surveydata(q_data, renameVarlabels=TRUE)
 
 names_cqrw <- c("cbreak", "question", "response", "weight")
 
@@ -64,4 +64,3 @@ test_that("surveyPlot works in Latex", {
       
     })
 
-unlink(path, recursive=TRUE)
