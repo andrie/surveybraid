@@ -9,7 +9,7 @@
 #' @name surveybraid-package
 #' @aliases surveybraid surveybraid-package
 #' @docType package
-#' @import  surveyor braid
+#' @importFrom surveyor surveyPlot
 #' @title Tools for reporting on survey objects.
 #' @author Andrie de Vries \email{andrie@@pentalibra.com}
 #' @keywords package
