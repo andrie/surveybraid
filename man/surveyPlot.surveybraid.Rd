@@ -23,14 +23,14 @@
 
   \item{codeFunction}{A surveyor stats function}
 
+  \item{onlyBreaks}{Numeric vector that limits crossbreak
+  processing}
+
   \item{outputType}{"latex", "ppt" or "device": Specifies
   destination of ouput}
 
   \item{plotSize}{Size in inches of plot output, e.g.
   c(4,3)}
-
-  \item{onlyBreaks}{Numeric vector that limits crossbreak
-  processing}
 
   \item{plotMultiplierLimits}{Numeric vector of length two,
   indicating lower and upper limit of vertical plot
