@@ -1,13 +1,3 @@
-\docType{package}
-\name{surveybraid-package}
-\alias{surveybraid}
-\alias{surveybraid-package}
-\title{Tools for reporting on survey objects.}
-\description{
-  A report writing system for surveys, using the braid
-  package.
-}
-\examples{
 # Prepares folders for braidsurveyor output
 
 latexPath <- file.path(tempdir(), "latex")
@@ -57,13 +47,4 @@ file.exists(file.path(latexPath, "surveyor_test.tex"))
 file.exists(file.path(graphPath, "Q1_.pdf"))
 file.exists(file.path(graphPath, "Q4_.pdf"))
       
-
-}
-\author{
-  Andrie de Vries \email{andrie@pentalibra.com}
-}
-\seealso{
-  \code{\link{as.surveybraid}}
-}
-\keyword{package}
 

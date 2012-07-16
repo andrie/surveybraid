@@ -14,5 +14,6 @@
 #' @author Andrie de Vries \email{andrie@@pentalibra.com}
 #' @keywords package
 #' @seealso \code{\link{as.surveybraid}}
+#' @example \inst\examples\example1.R
 NULL
 
