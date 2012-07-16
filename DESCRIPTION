@@ -16,8 +16,6 @@ Depends:
     surveydata (>= 0.1-07),
     surveyor (>= 0.2-04),
     braid (>= 0.1-07)
-Suggests:
-    
 Collate:
     'surveybraid-package.R'
     'surveybraid.R'
