@@ -68,7 +68,7 @@ surveyPlot.surveybraid <- function(
   braid    <- x$braid
   
   #browser()
-  #if(outputType=="ppt") if(!require(braidppt)) stop("Unable to load package braidppt")
+  if(outputType=="ppt") if(!require(braidppt)) stop("Unable to load package braidppt")
   
   if(!exists(qid, surveyor$sdata) & is.null(which.q(surveyor$sdata, qid))){
     message(paste(qid,": Question not found.  Processing aborted"))
@@ -83,6 +83,10 @@ surveyPlot.surveybraid <- function(
         paste(qid, plot_title), 
         headinglevel= "section",
         pagebreak=FALSE)
+  }
+
+  if(outputType=="ppt"){
+    braidpptNewSlide(braid, title=qid, subtitle=plot_title)
   }
   
   
@@ -132,17 +136,17 @@ surveybraidPrintQuestion <- function(i, surveyor, braid, qid, h, plotSize, outpu
       min(plotMax, max(plotMin, h$nquestion / 7)),
       plotMin
   )
-#  switch(outputType,
-#      latex = {
+  switch(outputType,
+      latex = {
         braidPlot(braid, h$plot, filename=filename,
             width=plotSize[1], height=(plotSize[2] * height_multiplier), Qid=qid)
-#      },
-#      ppt = {
-#        stopifnot(require(braidppt))
-#        braidppt::braidpptPlot(braid, h$plot, filename=filename,
-#            width=plotSize[1], height=(plotSize[2] * height_multiplier), Qid=qid)
-#      }
-#  )
+      },
+      ppt = {
+        stopifnot(require(braidppt))
+        braidppt::braidpptPlot(braid, h$plot, filename=filename,
+            width=plotSize[1], height=(plotSize[2] * height_multiplier), Qid=qid)
+      }
+  )
   
   catString <- if(surveyor$defaults$printTable) tableGuess(h) else ""
   
