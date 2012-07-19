@@ -8,16 +8,17 @@ Author: Andrie de Vries <apdevries@gmail.com>
 Description: A survey report writing system, building on surveyor and braid
 Author@R: person("Andrie", "de Vries",
     email="apdevries@gmail.com")
-Version: 0.0-05
+Version: 0.0-07
 URL: www.pentalibra.com
-Date: 2012-07-14
+Date: 2012-07-19
 ByteCompile: yes
 Depends:
     surveydata (>= 0.1-07),
-    surveyor (>= 0.2-04),
+    surveyor (>= 0.2-05),
     braid (>= 0.1-07)
 Suggests:
-    braidppt
+    braidppt (>= 0.0-05)
 Collate:
     'surveybraid-package.R'
     'surveybraid.R'
+    'surveybraidppt.R'
