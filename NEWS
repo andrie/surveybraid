@@ -1,4 +1,12 @@
-surveyorbraid 0.0-01 (2012-06-25)
+surveybraid 0.0-06 (2012-07-18)
+---------------
+
+New functionality:
+
+* Includes methods for surveybraid as well as surveybraidppt
+
+
+surveybraid 0.0-01 (2012-06-25)
 ---------------
 
 First experimental release. Attempt to separate braid and survey functionality from the original surveyor package.

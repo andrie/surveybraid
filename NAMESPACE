@@ -1,4 +1,7 @@
 S3method(surveyPlot,surveybraid)
+S3method(surveyPlot,surveybraidppt)
 export(as.surveybraid)
+export(as.surveybraidppt)
 export(is.surveybraid)
+export(is.surveybraidppt)
 importFrom(surveyor,surveyPlot)
